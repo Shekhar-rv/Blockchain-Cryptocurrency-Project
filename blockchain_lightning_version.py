@@ -17,7 +17,7 @@ class Block:
 
 foo_block = Block('foo_data', 'foo_hash', 'foo_last_hash')
 
-# Print out the data
+# Print out the data      
 
 print(foo_block.data)
 print(foo_block.hash)
