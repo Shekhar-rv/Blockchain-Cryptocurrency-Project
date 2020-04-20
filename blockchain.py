@@ -1,13 +1,7 @@
-class Block:
-    """
-    Block: a unit of storage.
-    Storage transactions in a blockchain that supports a crytocurrency.
-    """
-    def __init__(self, data):
-        self.data = data
+# Using modules from another file and importing the class
 
-    def __repr__(self):
-        return f'Block-data: {self.data}'
+from block import Block 
+
 class Blockchain:
     """
     Blockchain: a public ledger of transactions.
@@ -23,9 +17,16 @@ class Blockchain:
     def __repr__(self):
         return f'Blockchain: {self.chain}'
 
-blockchain = Blockchain()
-blockchain.add_block('one')
-blockchain.add_block('two')
-blockchain.add_block('three')
+def main():
+    blockchain = Blockchain()
+    blockchain.add_block('one')
+    blockchain.add_block('two')
+    blockchain.add_block('three')
 
-print(blockchain)
+    print(blockchain)
+    print(f"blockchain.py __name__: {__name__}") # Check the name of the module
+
+# If the name of the module is equal to '__main__' then it will run the main function
+
+if __name__ == '__main__':
+    main()
