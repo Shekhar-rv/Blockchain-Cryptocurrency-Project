@@ -1,21 +1,5 @@
 import time
 
-def mine_block(last_block, data):
-    """
-    Mine a block based on the given last_block and data.
-    """
-    timestamp = time.time_ns()
-    last_hash = last_block.hash
-    hash = f"{timestamp}-{last_hash}"
-
-    return Block(timestamp, last_hash, hash, data)
-
-def genesis():
-    """
-    Generate the genesis block.
-    """
-    return Block(1, 'genesis_last_hash', 'genesis_hash', [])
-
 class Block:
     """
     Block: a unit of storage.
@@ -35,9 +19,27 @@ class Block:
             f'Block-data: {self.data}'
         )
 
+    @staticmethod # Setting the function under a class, the function does not have a self keyword so we use a decorator static method
+    def mine_block(last_block, data):
+        """
+        Mine a block based on the given last_block and data.
+        """
+        timestamp = time.time_ns()
+        last_hash = last_block.hash
+        hash = f"{timestamp}-{last_hash}"
+
+        return Block(timestamp, last_hash, hash, data)
+
+    @staticmethod
+    def genesis():
+        """
+        Generate the genesis block.
+        """
+        return Block(1, 'genesis_last_hash', 'genesis_hash', [])
+
 def main():
-    genesis_block = genesis()
-    block = mine_block(genesis_block, 'foo')
+    genesis_block = Block.genesis()
+    block = Block.mine_block(genesis_block, 'foo')
     print(block)
 
 # If the name of the module is equal to '__main__' then it will run the main function
