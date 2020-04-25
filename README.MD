@@ -46,3 +46,24 @@ Check out the course: https://www.udemy.com/course/python-js-react-blockchain/?r
 * How the React engine works under the hood, and how React applies hooks.
 * CORS - and how to get over the CORS error properly.
 * How to build a pagination system.
+
+# Important Notes
+
+**Create a Virtual Enviornment**
+```
+python - m venv blockchain-env
+```
+**Activate the Virtual Environment**
+
+```
+source blockchain-env/bin/activate
+```
+**Install all Packages**
+```
+pip3 install -r requirements.txt
+```
+**Run the tests**
+Make sure to activate the virtual environment
+```
+python -m pytest backend/tests
+```
