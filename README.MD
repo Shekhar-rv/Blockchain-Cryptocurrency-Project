@@ -51,10 +51,9 @@ Check out the course: https://www.udemy.com/course/python-js-react-blockchain/?r
 
 **Create a Virtual Enviornment**
 ```
-python - m venv blockchain-env
+python -m venv blockchain-env
 ```
 **Activate the Virtual Environment**
-
 ```
 source blockchain-env/bin/activate
 ```
@@ -62,8 +61,7 @@ source blockchain-env/bin/activate
 ```
 pip3 install -r requirements.txt
 ```
-**Run the tests**
-Make sure to activate the virtual environment
+**Run the tests** *Make sure to activate the virtual environment*
 ```
 python -m pytest backend/tests
 ```

@@ -1,6 +1,7 @@
 import time
 from backend.util.crypto_hash import crypto_hash
 
+# Creating a global variable (with CAPS)
 GENESIS_DATA = {
     'timestamp':1,
     'last_hash': 'genesis_last_hash',

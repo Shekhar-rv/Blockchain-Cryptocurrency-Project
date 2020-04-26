@@ -9,7 +9,7 @@ def crypto_hash(*args):
     To get the sha-256 hash you need to encode the data as utf-8 to convert it to a byte chain and the call the hexdigest funcion.
     To see the unqiue string output we need to use hexdigest() otherwise you get the memory address representation.
     """
-    stringified_args = sorted(map(lambda data: json.dumps(data), args)) # Dumps the arguments regardless of its type into a str representation
+    stringified_args = sorted(map(lambda data: json.dumps(data), args)) # Dumps the arguments regardless of it's data type into a str representation
 
     joined_data = ''.join(stringified_args)
 
