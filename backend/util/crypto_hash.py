@@ -19,5 +19,6 @@ def main():
     print(f"crypto_hash('one', 2, [3]): {crypto_hash('one', 2, [3])}")
     print('\n')
     print(f"crypto_hash(2, [3], 'one'): {crypto_hash(2, [3], 'one')}")
+    
 if __name__ == '__main__':
     main()
