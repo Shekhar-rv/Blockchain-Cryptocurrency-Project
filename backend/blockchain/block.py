@@ -69,7 +69,14 @@ class Block:
         """
         Generate the genesis block.
         """
-        return Block(**GENESIS_DATA) # unpacking operator **
+        return Block(**GENESIS_DATA) # unpacking operator in this case a dictionary **
+
+    @staticmethod
+    def from_json(block_json):
+        """
+        Deserialize a block's josn representation back into a block instance.
+        """
+        return Block(**block_json)
 
     @staticmethod
     def adjust_difficulty(last_block, new_timestamp):
