@@ -1,6 +1,7 @@
 import os
-import random
 import requests
+import random
+
 
 from flask import Flask, jsonify
 
@@ -46,5 +47,5 @@ if os.environ.get('PEER') == 'True':
         print('\n -- Successfully synchronized the local chain')
     except Exception as e:
         print(f'\n -- Error syncronizing: {e}')
-        
+
 app.run(port=PORT)
