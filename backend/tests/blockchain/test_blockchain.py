@@ -35,7 +35,7 @@ def test_replace_chain(blockchain_three_blocks):
 
     assert blockchain.chain == blockchain_three_blocks.chain
 
-def test_replace_chain(blockchain_three_blocks):
+def test_replace_chain_not_longer(blockchain_three_blocks):
     blockchain = Blockchain()
 
     with pytest.raises(Exception, match = 'Cannot replace. The incoming chain must be longer.'):
