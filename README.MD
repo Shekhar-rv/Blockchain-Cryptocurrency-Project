@@ -85,7 +85,7 @@ Make sure to activate the virtual environment.
 export PEER=True && python -m backend.app
 ```
 
-** Run the frontend**
+**Run the frontend**
 
 In the frontend directory:
 ```
