@@ -91,3 +91,11 @@ In the frontend directory:
 ```
 npm run start
 ```
+
+**Seed the backend with data**
+
+Make sure to activate the virtual environment.
+
+```
+export SEED_DATA=True && python -m backend.app
+```
